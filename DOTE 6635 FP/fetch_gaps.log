@@ -1,0 +1,64 @@
+=================================================================
+  fetch_gaps.py — filling 5 missing quarters
+=================================================================
+
+  Existing borrow: 329,792 rows
+  Existing supply: 499,718 rows
+
+[1/5] 2021-01-01 → 2021-04-01
+  borrow 2021-01-01→2021-04-01...
+    → 46,009 rows
+  supply 2021-01-01→2021-04-01...
+  WARNING: 2021-01-01→2021-04-01 failed (402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ6ATFDTAHBF2NBPAH0BVCX/results) — skipping
+
+[2/5] 2021-04-01 → 2021-07-01
+  borrow 2021-04-01→2021-07-01...
+    → 77,948 rows
+  supply 2021-04-01→2021-07-01...
+  WARNING: 2021-04-01→2021-07-01 failed (402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ6BJ7SYMG3XS6D5DT2TZCB/results) — skipping
+
+[3/5] 2021-07-01 → 2021-10-01
+  borrow 2021-07-01→2021-10-01...
+    → 50,328 rows
+  supply 2021-07-01→2021-10-01...
+  WARNING: 2021-07-01→2021-10-01 failed (402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ6C4VEP611G6ACARRSHQNB/results) — skipping
+
+[4/5] 2025-07-01 → 2025-10-01
+  borrow 2025-07-01→2025-10-01...
+    → 9,188 rows
+  supply 2025-07-01→2025-10-01...
+    → 17,143 rows
+
+[5/5] 2025-10-01 → 2026-01-01
+  borrow 2025-10-01→2026-01-01...
+    → 3,276 rows
+  supply 2025-10-01→2026-01-01...
+    → 3,065 rows
+
+  Final borrow: 334,349 rows
+  Final supply: 519,146 rows
+
+  Rebuilding dataset.csv...
+
+  Building account-date dataset from real Dune events...
+      Accounts: 7094/70946
+      Accounts: 14188/70946
+      Accounts: 21282/70946
+      Accounts: 28376/70946
+      Accounts: 35470/70946
+      Accounts: 42564/70946
+      Accounts: 49658/70946
+      Accounts: 56752/70946
+      Accounts: 63846/70946
+      Accounts: 70940/70946
+  Assigning future liquidation labels (vectorized)...
+  Removed 37,617 pre-window artifact rows (collateral=0/debt>0) → 197,748 rows remain
+  dataset.csv: 197,748 rows
+  Date range : 2021-10-01 00:00:00 → 2025-12-31 00:00:00
+  Accounts   : 52,918
+  label_7d   : 2,142 positives (1.08%)
+  label_14d  : 3,457 positives (1.75%)
+
+=================================================================
+  fetch_gaps.py complete.
+=================================================================

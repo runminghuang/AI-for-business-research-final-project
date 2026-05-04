@@ -1,0 +1,141 @@
+=================================================================
+  fetch_missing.py — filling 2021-2022 and 2024-2025 gaps
+=================================================================
+
+  Existing borrow events: 80,543 rows
+  Existing supply events: 129,878 rows
+
+  Period 2021-01-01 → 2023-01-01 (8 quarters)
+
+  [1/8] Quarter 2021-01-01 → 2021-04-01
+    Fetching borrow events 2021-01-01 → 2021-04-01...
+      → 46,009 rows
+    Fetching supply events 2021-01-01 → 2021-04-01...
+    WARNING: 2021-01-01→2021-04-01 failed (HTTPError: 402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ59MY59JS6C5FGXEPW1WJY/results) — skipping quarter
+
+  [2/8] Quarter 2021-04-01 → 2021-07-01
+    Fetching borrow events 2021-04-01 → 2021-07-01...
+      → 77,948 rows
+    Fetching supply events 2021-04-01 → 2021-07-01...
+    WARNING: 2021-04-01→2021-07-01 failed (HTTPError: 402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ5AEPAFR94F4EXC38T8G2F/results) — skipping quarter
+
+  [3/8] Quarter 2021-07-01 → 2021-10-01
+    Fetching borrow events 2021-07-01 → 2021-10-01...
+      → 50,328 rows
+    Fetching supply events 2021-07-01 → 2021-10-01...
+    WARNING: 2021-07-01→2021-10-01 failed (HTTPError: 402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ5B29GSKSSJM5ERN70SQFG/results) — skipping quarter
+
+  [4/8] Quarter 2021-10-01 → 2022-01-01
+    Fetching borrow events 2021-10-01 → 2022-01-01...
+      → 31,742 rows
+    Fetching supply events 2021-10-01 → 2022-01-01...
+      → 56,480 rows
+
+  [5/8] Quarter 2022-01-01 → 2022-04-01
+    Fetching borrow events 2022-01-01 → 2022-04-01...
+      → 27,434 rows
+    Fetching supply events 2022-01-01 → 2022-04-01...
+      → 43,597 rows
+
+  [6/8] Quarter 2022-04-01 → 2022-07-01
+    Fetching borrow events 2022-04-01 → 2022-07-01...
+      → 55,175 rows
+    Fetching supply events 2022-04-01 → 2022-07-01...
+      → 77,273 rows
+
+  [7/8] Quarter 2022-07-01 → 2022-10-01
+    Fetching borrow events 2022-07-01 → 2022-10-01...
+      → 45,739 rows
+    Fetching supply events 2022-07-01 → 2022-10-01...
+      → 79,048 rows
+
+  [8/8] Quarter 2022-10-01 → 2023-01-01
+    Fetching borrow events 2022-10-01 → 2023-01-01...
+      → 43,173 rows
+    Fetching supply events 2022-10-01 → 2023-01-01...
+      → 88,234 rows
+
+  Period 2024-01-01 → 2026-01-01 (8 quarters)
+
+  [1/8] Quarter 2024-01-01 → 2024-04-01
+    Fetching borrow events 2024-01-01 → 2024-04-01...
+      → 9,878 rows
+    Fetching supply events 2024-01-01 → 2024-04-01...
+      → 15,618 rows
+
+  [2/8] Quarter 2024-04-01 → 2024-07-01
+    Fetching borrow events 2024-04-01 → 2024-07-01...
+      → 9,520 rows
+    Fetching supply events 2024-04-01 → 2024-07-01...
+      → 15,294 rows
+
+  [3/8] Quarter 2024-07-01 → 2024-10-01
+    Fetching borrow events 2024-07-01 → 2024-10-01...
+      → 16,785 rows
+    Fetching supply events 2024-07-01 → 2024-10-01...
+      → 25,855 rows
+
+  [4/8] Quarter 2024-10-01 → 2025-01-01
+    Fetching borrow events 2024-10-01 → 2025-01-01...
+      → 8,083 rows
+    Fetching supply events 2024-10-01 → 2025-01-01...
+      → 15,144 rows
+
+  [5/8] Quarter 2025-01-01 → 2025-04-01
+    Fetching borrow events 2025-01-01 → 2025-04-01...
+      → 7,748 rows
+    Fetching supply events 2025-01-01 → 2025-04-01...
+      → 11,559 rows
+
+  [6/8] Quarter 2025-04-01 → 2025-07-01
+    Fetching borrow events 2025-04-01 → 2025-07-01...
+      → 5,337 rows
+    Fetching supply events 2025-04-01 → 2025-07-01...
+      → 4,563 rows
+
+  [7/8] Quarter 2025-07-01 → 2025-10-01
+    Fetching borrow events 2025-07-01 → 2025-10-01...
+      → 9,188 rows
+    Fetching supply events 2025-07-01 → 2025-10-01...
+    WARNING: 2025-07-01→2025-10-01 failed (HTTPError: 402 Client Error: Payment Required for url: https://api.dune.com/api/v1/execution/01KQQ5NTNND4NV1JBR6Y5NKZN5/results) — skipping quarter
+
+  [8/8] Quarter 2025-10-01 → 2026-01-01
+    Fetching borrow events 2025-10-01 → 2026-01-01...
+      → 3,276 rows
+    Fetching supply events 2025-10-01 → 2026-01-01...
+    WARNING: 2025-10-01→2026-01-01 failed (HTTPError: 402 Client Error: Payment Required for url: https://api.dune.com/api/v1/sql/execute) — skipping quarter
+
+
+  Building final combined CSVs...
+  Final raw_borrow_events.csv: 329,792 rows
+  Final raw_supply_events.csv: 499,718 rows
+  borrow: 2021-10-01 → 2025-06-30
+  supply: 2021-10-01 → 2025-06-30
+
+  Rebuilding dataset.csv from combined raw events...
+  ETH prices loaded: 1,819 rows (2021-01-08 → 2025-12-31)
+
+  Building account-date dataset from real Dune events...
+      Accounts: 6999/69998
+      Accounts: 13998/69998
+      Accounts: 20997/69998
+      Accounts: 27996/69998
+      Accounts: 34995/69998
+      Accounts: 41994/69998
+      Accounts: 48993/69998
+      Accounts: 55992/69998
+      Accounts: 62991/69998
+      Accounts: 69990/69998
+  Assigning future liquidation labels (vectorized)...
+  Removed 36,481 pre-window artifact rows (collateral=0/debt>0) → 196,763 rows remain
+
+  dataset.csv rebuilt: 196,763 rows
+  Date range: 2021-10-01 00:00:00 → 2025-06-30 00:00:00
+  Unique accounts: 52,770
+  label_7d positives:  2,127 (1.08%)
+  label_14d positives: 3,440 (1.75%)
+
+=================================================================
+  fetch_missing.py complete.
+  Next: python model.py && python models_survival.py && python models_advanced.py
+=================================================================
