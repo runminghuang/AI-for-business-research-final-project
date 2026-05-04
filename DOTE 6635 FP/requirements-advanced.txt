@@ -1,5 +1,0 @@
--r requirements.txt
-torch==2.5.1
-tqdm==4.67.1
-openai==1.54.4
-anthropic==0.39.0
