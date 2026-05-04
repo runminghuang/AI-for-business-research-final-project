@@ -1,0 +1,13 @@
+Model,Horizon,ROC_AUC,PR_AUC,F1_optimal,Brier,Note
+Logistic Regression,7d,0.774,0.0339,0.1007,0.0108,model.py
+XGBoost,7d,0.7394,0.0252,0.058,0.0496,model.py
+MLP (sklearn),7d,0.6748,0.0221,0.058,0.0147,
+LSTM (PyTorch),7d,0.8085,0.0525,0.1399,0.0099,
+LLM Zero-shot,7d,0.8136,0.6485,0.6549,0.2044,n=994
+LLM Agent (ReAct),7d,0.8116,0.0692,0.2,0.0864,n=1000
+Logistic Regression,14d,0.7841,0.0591,0.1366,0.0172,model.py
+XGBoost,14d,0.7749,0.049,0.0999,0.0702,model.py
+MLP (sklearn),14d,0.6464,0.0367,0.0847,0.0216,
+LSTM (PyTorch),14d,0.8249,0.1037,0.2423,0.0158,
+LLM Zero-shot,14d,0.7869,0.5989,0.6466,0.222,n=986
+LLM Agent (ReAct),14d,0.7856,0.064,0.2,0.0803,n=1000

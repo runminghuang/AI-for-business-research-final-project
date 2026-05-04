@@ -1,0 +1,5 @@
+Model,Horizon,ROC_AUC,PR_AUC,Recall_at_P10,F1_optimal,Brier
+Logistic Regression,7d,0.774,0.0339,0.0,0.1007,0.0108
+XGBoost,7d,0.7394,0.0252,0.0025,0.058,0.0496
+Logistic Regression,14d,0.7841,0.0591,0.2138,0.1366,0.0172
+XGBoost,14d,0.7749,0.049,0.0123,0.0999,0.0702
